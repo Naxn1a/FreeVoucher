@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: whitesmoke;
+    background: radial-gradient(
+                at 18% 99%,
+                rgb(223, 229, 113) 0px,
+                transparent 50%
+            )
+            repeat scroll 0% 0%,
+        radial-gradient(at 97% 8%, rgb(118, 249, 173) 0px, transparent 50%)
+            repeat scroll 0% 0%,
+        radial-gradient(at 79% 82%, rgb(233, 109, 131) 0px, transparent 50%)
+            repeat scroll 0% 0%,
+        radial-gradient(at 96% 10%, rgb(222, 81, 251) 0px, transparent 50%)
+            repeat scroll 0% 0%,
+        radial-gradient(at 42% 20%, rgb(116, 240, 251) 0px, transparent 50%)
+            repeat scroll 0% 0%,
+        radial-gradient(at 4% 49%, rgb(203, 88, 218) 0px, transparent 50%)
+            repeat scroll 0% 0%,
+        rgba(0, 0, 0, 0)
+            radial-gradient(at 57% 33%, rgb(218, 83, 228) 0px, #a299ff 50%)
+            repeat scroll 0% 0%;
+}
+
+footer {
+    margin: auto;
+    margin-bottom: 1rem;
+    color: #565656;
+}
+
+.slide {
+    margin: 1rem auto;
+    -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+    mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+}
+
+.slide img {
+    margin: 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 1rem;
+    width: 425px;
+    height: 200px;
+    background-color: white;
+    color: #565656;
+    border-radius: 10px;
+}
+
+.line {
+    border-left: 5px dotted #565656;
+    height: 120px;
+    left: 40%;
+    margin: 0 20px;
+}
+
+.voucher {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.voucher h1 {
+    font-size: 3rem;
+    color: #565656;
+}
+
+.voucher h1 span {
+    font-size: 24px;
+}
+
+.voucher h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.btn-copy {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.btn-copy input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: whitesmoke;
+}
+
+.btn-copy button {
+    position: absolute;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    right: 16px;
+}
+
+.table-scroll {
+    height: 630px;
+    overflow: auto;
+}
+
+table {
+    color: #565656;
+    border-radius: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+th {
+    text-align: left;
+}
+
+thead {
+    th {
+        background-color: #55608f;
+        color: #fff;
+    }
+}

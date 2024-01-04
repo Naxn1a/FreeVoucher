@@ -1,0 +1,33 @@
+{
+    "address": "0x73b79284E8fc7b9e2264E9e80998aADF66f2D1FA",
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "sender",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "time",
+                    "type": "uint256"
+                }
+            ],
+            "name": "FreeVoucher",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                { "internalType": "uint256", "name": "time", "type": "uint256" }
+            ],
+            "name": "receiveVoucher",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

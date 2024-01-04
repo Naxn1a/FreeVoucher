@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Address {
+  address String    @id @unique
+  voucher Voucher[]
+}
+
+model Voucher {
+  code      String   @id @unique
+  voucher   String
+  discount  Int
+  addressId String
+  address   Address  @relation(fields: [addressId], references: [address])
+}
