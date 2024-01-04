@@ -1,3 +1,5 @@
+import generator from "./generator";
+
 import kfc from "@/images/kfc.jpg";
 import major from "@/images/major.jpg";
 import sf from "@/images/sf.jpg";
@@ -9,33 +11,34 @@ const list = [
     {
         img: kfc,
         voucher: "kfc",
-        discount: discount[Math.floor(Math.random() * 5)],
     },
     {
         img: major,
         voucher: "major",
-        discount: discount[Math.floor(Math.random() * 5)],
     },
     {
         img: sf,
         voucher: "sf",
-        discount: discount[Math.floor(Math.random() * 5)],
     },
     {
         img: dairyqueen,
         voucher: "dairyqueen",
-        discount: discount[Math.floor(Math.random() * 5)],
     },
     {
         img: pizzahut,
         voucher: "pizzahut",
-        discount: discount[Math.floor(Math.random() * 5)],
     },
 ];
 
 // Random voucher
 function getRandom() {
-    return list[Math.floor(Math.random() * 5)];
+    const voucher = list[Math.floor(Math.random() * 5)]
+    return {
+        img: voucher.img,
+        voucher: voucher.voucher,
+        discount: discount[Math.floor(Math.random() * 5)],
+        code: generator(voucher.voucher.toUpperCase()),
+    }
 }
 
 export { kfc, major, sf, dairyqueen, pizzahut, getRandom };

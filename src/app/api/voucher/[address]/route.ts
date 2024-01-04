@@ -28,11 +28,11 @@ export async function GET(req: Request, { params }: { params: Params }) {
     }
 }
 
-// Create voucher
+// Save to database
 export async function POST(req: Request, { params }: { params: Params }) {
     try {
         const voucher: Voucher = await req.json(); // Request from body
-        // Transaction for create
+        // Transaction
         const transaction = prisma.$transaction(async (tx) => {
             // Check address
             const address = await tx.address.findUnique({
